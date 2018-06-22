@@ -1,0 +1,3153 @@
+* {
+    outline: 1px solid #f0f;
+}
+
+body {
+
+    overflow-y: scroll;
+
+    overflow-x: hidden;
+}
+
+
+
+
+/*============== warp start =================*/
+
+.warp {
+    height: 100%;
+    position: fixed;
+    display: block;
+    z-index: 999;
+}
+
+.mubox {
+    position: absolute;
+    width: 230px;
+    height: 100%;
+    display: block;
+    background: #fff;
+    left: -135px;
+    z-index: 99;
+    transition: .1s;
+    border-left: 1px solid transparent;
+}
+
+.mubox:hover {
+    left: 0px;
+}
+
+.logo {
+    float: right;
+}
+
+.logo img {
+    vertical-align: middle;
+    padding-top: 10px;
+    width: 73px;
+    height: 161px;
+}
+
+.icomu {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 31px;
+    display: block;
+}
+
+.menuLine {
+    position: absolute;
+    right: 0;
+    width: 95px;
+    height: 100%;
+    border-left: 1px solid #222;
+    border-style: dotted;
+}
+
+.menu {
+    font-family: Helvetica;
+    left: 0;
+    margin: 8px 0 0 2px;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+
+/*==========側欄選單1==============*/
+
+.first_menu {
+    margin: 0 -35px 0 0;
+    display: block;
+    cursor: pointer;
+}
+
+.first_menu .area_menu {
+    display: block;
+    width: 94px;
+    height: 38px;
+    margin: 10px 0;
+    padding-bottom: 20px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.first_menu ul li {
+    display: block;
+    margin: 5px 10px;
+    /*    padding: 0 0 0 15px;*/
+    background: #938473;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.first_menu .hvr-outline-out {
+    color: #fff;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+
+/*==========側欄選單效果==============*/
+
+.hvr-outline-out {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.hvr-outline-out:before {
+    content: '';
+    position: absolute;
+    border: 4px solid #938473;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.3s;
+    /*屬性規定完成過度效果需要花費的時間*/
+    transition-property: top, right, bottom, left;
+}
+
+.hvr-outline-out:hover:before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+}
+
+.menu .first_menu .area_menu {
+    background: url("../img/icon/asset 156.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+
+
+/*==========側欄選單2==============*/
+
+.menu .second li {
+    margin: 0px;
+    display: block;
+    cursor: pointer;
+}
+
+.hvr-under-center {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-under-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #938473;
+    height: 4px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.hvr-under-center:hover:before {
+    left: 0;
+    right: 0;
+}
+
+.menu .second .about01 {
+    background: url("../img/icon/asset 158.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second .addiction02 {
+    background: url("../img/icon/asset 159.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second .agenda03 {
+    background: url("../img/icon/asset 160.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second .affection04 {
+    background: url("../img/icon/asset 161.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second .access05 {
+    background: url("../img/icon/asset 162.gif") no-repeat;
+    text-indent: -10000px;
+}
+
+.menu .second li a {
+    display: block;
+    width: 94px;
+    height: 38px;
+    padding-bottom: 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+
+/*=============== hamburger ==================*/
+
+.ham-header {
+    position: relative;
+}
+
+.ham-menu li a {
+    display: none;
+    color: #fff;
+    padding: 1em;
+    text-decoration: none;
+}
+
+
+
+
+/*在PC上隱藏漢堡選單*/
+
+.showmenu {
+    display: none;
+}
+
+.ham {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.ham2 {
+    width: 25px;
+    margin-top: 10px;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.showmenu:hover .ham2 {
+    width: 50px;
+}
+
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+    .ham-menu {
+        /*隱藏選單開始*/
+        max-height: 0px;
+        overflow: hidden;
+        /*隱藏選單結束*/
+        transition: max-height 2.3s;
+        margin-top: 1px;
+        /*絕對定位疊在網頁上*/
+        position: fixed;
+        z-index: 100;
+        /*header 80px+1px boder 線條*/
+        top: 50px;
+        left: 0;
+        background: rgba(0, 0, 0, .8);
+    }
+    .ham-menu li {
+        text-align: center;
+        float: none;
+        border-bottom: 1px dashed #fff;
+    }
+    .ham-menu li a {
+        display: block;
+        transition: all 0.3s;
+        padding: 10px 50px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .ham-menu li a:hover {
+        background: rgba(255, 255, 255, .9);
+        color: #a52124;
+    }
+    .showmenu {
+        position: fixed;
+        z-index: 100;
+        display: block;
+        margin: 1em;
+    }
+
+    /*jQ點擊後動態在 body 加上 class */
+    .menu-show .ham-menu {
+        max-height: 700px
+    }
+}
+
+
+
+/*mobile行動版*/
+
+@media (max-width: 767px) {
+    .mubox {
+        display: none;
+    }
+
+    .ham-menu {
+        /*隱藏選單開始*/
+        max-height: 0px;
+        overflow: hidden;
+        /*隱藏選單結束*/
+        transition: max-height 2.3s;
+        margin-top: 1px;
+        /*絕對定位疊在網頁上*/
+        position: fixed;
+        z-index: 100;
+        /*header 80px+1px boder 線條*/
+        top: 50px;
+        left: 0;
+        background: rgba(0, 0, 0, .8);
+    }
+    .ham-menu li a {
+        display: block;
+        transition: all 0.3s;
+        padding: 10px 50px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .ham-menu li a:hover {
+        background: rgba(255, 255, 255, .9);
+        color: #a52124;
+    }
+
+    /*jQ點擊後動態在 body 加上 class */
+    .menu-show .ham-menu {
+        max-height: 700px
+    }
+}
+
+
+
+
+/*============== warp close =================*/
+
+
+/*====================Public area==============*/
+
+.contxt p {
+    line-height: 20px;
+}
+
+.contxtbd {
+    margin: 0 0 10px 0;
+    padding: 0 8px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+.contxtbd .left {
+    float: left;
+    width: 47%;
+    line-height: 25px;
+}
+
+.contxtbd .right {
+    float: right;
+    width: 47%;
+    line-height: 25px;
+}
+
+.contxtft {
+    padding: 0 8px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+.contxtft .left {
+    float: left;
+    width: 47%;
+}
+
+.contxtft .right {
+    float: right;
+    width: 47%;
+}
+
+
+
+
+/*====================Public area close==============*/
+
+
+/*============== wrapper start =================*/
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+/*============== wrapper close =================*/
+
+
+/*====================Public area==============*/
+
+.hline {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    display: block;
+    z-index: 3;
+    text-align: center;
+}
+
+.hline img {
+    vertical-align: middle;
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+
+
+/*============== unit1 star =================*/
+
+.idx1 {
+    width: 100%;
+    padding-bottom: 800px;
+}
+
+.mainbox1 {
+    position: relative;
+    background: url("../img/equipment/01-2.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+/*============== arrow ==============*/
+
+.hline .unit1 {
+    position: absolute;
+    display: block;
+    bottom: 175px;
+    margin-left: -8px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+
+
+/*============== arrow 動畫 ==============*/
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    opacity: 0;
+}
+
+.arrow-1 {
+    animation: arrowmov 2s ease-in-out 6;
+}
+
+.arrow-2 {
+    animation: arrowmov 2s 1s ease-in-out 6;
+}
+
+.arrow:before,
+.arrow:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+}
+
+.arrow:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+}
+
+@keyframes arrowmov {
+    0% {
+        opacity: 0;
+        top: 80%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+    .mainbox1 {
+        background: url("../img/equipment/01-2.jpg") -150px no-repeat;
+    }
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox1 {
+        background: url("../img/equipment/01-2.jpg") -300px no-repeat;
+    }
+    .hline img {
+        width: 100%;
+    }
+    .arrow {
+        left: 49%;
+    }
+
+    .hline .unit1 {
+        position: absolute;
+        display: block;
+        bottom: 110px;
+        margin-left: -5px;
+        left: 50%;
+        width: 7%;
+        height: 8%;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+
+/*============== unit2 star =================*/
+
+.idx2 {
+    width: 100%;
+    padding-bottom: 1340px;
+}
+
+.mainbox2 {
+    position: relative;
+    background: url("../img/background/asset 33.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainbox2 .bt2 {
+    background: url("../img/icon/asset 7-1.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 25%;
+    display: block;
+    text-align: center;
+    z-index: 5;
+}
+
+.MaskBox1 {
+    display: block;
+}
+
+.MaskBox2 {
+    display: block;
+}
+
+.MaskBox3 {
+    display: block;
+}
+
+.MaskBox4 {
+    display: block;
+}
+
+
+.bt2 img {
+    position: relative;
+    margin: auto;
+    width: 480px;
+    height: 580px;
+    z-index: 6;
+    vertical-align: middle;
+}
+
+.bgBox {
+    background: url("../img/background/asset 143.jpeg");
+    position: relative;
+    width: 100%;
+    max-width: 910px;
+    margin: 0 auto 40px auto;
+    padding: 40px 0 0 0;
+    z-index: 7;
+}
+
+.bgPoint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    background: url("../img/background/asset 164.png") repeat;
+    background-color: #222;
+    z-index: 8;
+}
+
+.bgPoint ul {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    text-align: center;
+}
+
+.bgPoint li {
+    width: 202px;
+    padding-bottom: 432px;
+    position: relative;
+    right: 0%;
+    text-align: center;
+    margin: 40px 18px 0 12px;
+}
+
+.bgPoint ul li img {
+    width: 202px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bgPoint .plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 63px;
+    height: 63px;
+    margin: -31px 0 0 -31px;
+    background: url("../img/icon/asset 165.png") no-repeat;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.bgPoint .eff_Mask {
+    width: 202px;
+    height: 432px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .8s;
+    transform: scale(1);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.bgPoint li:hover .eff_Mask {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.bt2-rwd-ipad {
+    display: none;
+}
+
+.bt2-rwd-mobile {
+    display: none;
+}
+
+.contxt2 {
+    position: absolute;
+    bottom: 25px;
+    left: 10%;
+    display: block;
+    right: 10%;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 800px;
+    z-index: 3;
+}
+
+
+
+
+/*====================maskbox==========================*/
+
+.btn-main {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main4 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-mainbox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/mskbox01.png");
+}
+
+.btn-mainbox2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox02.png");
+}
+
+.btn-mainbox3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox03.png");
+}
+
+.btn-mainbox4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox04.png");
+}
+
+.btn-close {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 40px;
+    height: 41px;
+    background-image: url("../img/icon/asset 176.png");
+    cursor: pointer;
+}
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+    .mainbox2 .bt2 {
+        display: none;
+    }
+    .bt2-rwd-mobile {
+        display: none;
+    }
+    .contxt2 {
+        font: 16px/18px "Gill Sans MT";
+        min-width: 250px;
+        z-index: 3;
+    }
+    .mubox {
+        display: none;
+    }
+    .bt2-rwd {
+        align-items: center;
+        background: url("../img/icon/asset 7-1.png") no-repeat;
+        background-position: 10% 10%;
+        position: absolute;
+        width: 100%;
+        min-height: 20%;
+        z-index: 5;
+        background-size: 100%;
+        display: block;
+    }
+    .bt2-rwd-ipad {
+        display: block;
+    }
+    .bt2-rwd-ipad {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        z-index: 6;
+    }
+    .bt2-rwd-ipad .bgBox-ipad {
+        position: relative;
+        top: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: wrap;
+        flex-wrap: wrap;
+        width: 700px;
+    }
+    .bt2-rwd-ipad .bgBox-ipad li {
+        position: relative;
+    }
+    .bt2-rwd-ipad .bgBox-ipad li img {
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+    }
+    .bgBox-ipad .plus {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 63px;
+        height: 63px;
+        margin: -31px 0 0 -31px;
+        background: url("../img/icon/asset 165.png") no-repeat;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .bgBox-ipad .eff_Mask {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, .4);
+        opacity: 0;
+        transition: .8s;
+        transform: scale(1);
+        z-index: 9;
+        cursor: pointer;
+    }
+
+    .bgBox-ipad li:hover .eff_Mask {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .btn-main {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+    .btn-main2 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+    .btn-main3 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+    .btn-main4 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+
+    .bt2-rwd-ipad {
+        display: none;
+    }
+    .bt2-rwd-mobile {
+        display: block;
+    }
+
+    .mainbox2 {
+        background: url("../img/background/asset 33.jpeg") no-repeat;
+    }
+    .mainbox2 .bt2 {
+        display: none;
+    }
+
+    .bt2-rwd {
+        display: block;
+        background: url("../img/icon/asset 7-1.png") no-repeat;
+        position: absolute;
+        width: 100%;
+        min-height: 20%;
+        z-index: 5;
+        background-size: 100%;
+    }
+    .bt2-rwd-mobile .bgBox-mobile {
+        position: relative;
+        top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .bt2-rwd-mobile .bgBox-mobile li {
+        position: relative;
+    }
+    .bt2-rwd-mobile .bgBox-mobile li img {
+
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .bgBox-mobile .eff_Mask {
+        width: 400px;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .4);
+        opacity: 0;
+        transition: .8s;
+        transform: scale(1);
+        z-index: 9;
+        cursor: pointer;
+    }
+
+    .bgBox-mobile li:hover .eff_Mask {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .btn-mainbox {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url("../img/maskbox/mskbox01.png");
+        background-position: -235% 100%;
+    }
+    .btn-mainbox2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url("../img/maskbox/maskbox02.png");
+        background-position: -230% 15%;
+    }
+    .btn-mainbox3 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url("../img/maskbox/maskbox03.png");
+        background-position: -245% 30%;
+    }
+    .btn-mainbox4 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url("../img/maskbox/maskbox04.png");
+        background-position: -196% 100%;
+    }
+}
+
+
+
+
+/*============== unit3 star =================*/
+
+.idx3 {
+    width: 100%;
+    padding-bottom: 760px;
+}
+
+.mainbox3 {
+    position: relative;
+    background: url("../img/background/asset 38.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+
+
+
+/*============== arrow ==============*/
+
+.hline .unit3 {
+    position: absolute;
+    display: block;
+    bottom: 180px;
+    margin-left: -12px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+    .mainbox3 {
+        background: url("../img/background/asset 38.jpeg") no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox3 {
+        background: url("../img/background/asset 38.jpeg") -280px no-repeat;
+        background-size: cover;
+    }
+    .hline .unit3 {
+        position: absolute;
+        display: block;
+        bottom: 115px;
+        margin-left: -8px;
+        left: 50%;
+        width: 7%;
+        height: 8%;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+/*============== unit4 star =================*/
+
+.idx4 {
+    width: 100%;
+    padding-bottom: 920px;
+}
+
+.mainbox4 {
+    position: relative;
+    background: url("../img/background/asset 20.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainbox4 .bt4 {
+    background: url("../img/icon/asset 4-1.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 80%;
+    display: block;
+    text-align: center;
+    z-index: 5;
+}
+
+.bt4 #abgneBlock {
+
+    position: absolute;
+    width: 940px;
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+    left: 10%;
+    right: 10%;
+    margin-top: 100px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.bt4 #abgneBlock ul.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    width: 9999px;
+    height: 100%;
+}
+
+.bt4 #abgneBlock ul.list li {
+    float: left;
+    width: 940px;
+    height: 100%;
+}
+
+.bt4 #abgneBlock .list img {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    vertical-align: middle;
+}
+
+.bt4 #abgneBlock ul.playerControl {
+    margin: auto;
+    list-style: none;
+    position: absolute;
+    bottom: 0px;
+    height: 14px;
+}
+
+.bt4 #abgneBlock ul.playerControl li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0px 2px;
+    background: url("../img/icon/asset 166.png") no-repeat 0 0;
+}
+
+.bt4 #abgneBlock ul.playerControl li.current {
+    background-position: -23px 0;
+}
+
+.bt4 #abgneBlock ul.playerControl li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0px 15px;
+    background: url("../img/icon/asset 166.png") no-repeat 0px 0;
+}
+
+.bt4 #abgneBlock ul.playerControl li.current {
+    background-position: 0 0;
+}
+
+.contxt4 {
+    position: absolute;
+    bottom: 145px;
+    left: 10%;
+    display: block;
+    right: 10%;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 900px;
+    z-index: 3;
+}
+
+.bt4-rwd-ipad {
+    display: none;
+}
+
+.bt4-rwd-mobile {
+    display: none;
+}
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+    .mainbox4 .bt4 {
+        display: none;
+    }
+    .bt4-rwd-ipad {
+        display: block;
+    }
+    .bt4-rwd {
+        align-items: center;
+        background: url("../img/icon/asset 4-1.png") no-repeat;
+        background-position: 10% 10%;
+        position: absolute;
+        width: 100%;
+        min-height: 25%;
+        z-index: 5;
+        background-size: 100%;
+        display: block;
+    }
+    .contxt4 {
+        font: 16px/18px "Gill Sans MT";
+        bottom: 20px;
+    }
+    .bgBox-ipad4 {
+        width: 100%;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .bgBox-ipad4 img {
+        align-items: center;
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox4 .bt4 {
+        display: none;
+    }
+    .bt4-rwd-ipad {
+        display: none;
+    }
+    .bt4-rwd-mobile {
+        display: block;
+    }
+    .mainbox4 {
+        background: url("../img/background/asset 20.jpeg") no-repeat;
+    }
+
+
+    .bt4-rwd {
+        background: url("../img/icon/asset 4-1.png") no-repeat;
+        background-position: 10% 50%;
+        position: absolute;
+        width: 100%;
+        min-height: 40%;
+        z-index: 5;
+        background-size: 100%;
+    }
+    .bgBox-mobile4 {
+        position: relative;
+    }
+    .bt4-rwd-mobile .bgBox-mob {
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .bt4-rwd-mobile .bgBox-mob img {
+        align-items: center;
+        width: 100%;
+    }
+    .knife-circle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .knife-circle ul li {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid #a52124;
+        margin-right: 10px;
+        overflow: hidden;
+        box-shadow: 1px 5px 12px rgba(255, 0, 0, 0.5);
+    }
+    .knife-circle ul li img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+/*============== unit5 star =================*/
+
+.idx5 {
+    width: 100%;
+    padding-bottom: 760px;
+}
+
+.mainbox5 {
+    position: relative;
+    background: url("../img/background/asset 18.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+
+/*============== arrow ==============*/
+
+.hline .unit5 {
+    position: absolute;
+    display: block;
+    bottom: 168px;
+    margin-left: -12px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox5 {
+        background: url("../img/background/asset 18.jpeg") -250px no-repeat;
+        background-size: cover;
+    }
+    .hline .unit5 {
+        position: absolute;
+        display: block;
+        bottom: 107px;
+        margin-left: -8px;
+        left: 50%;
+        width: 7%;
+        height: 8%;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============== unit6 star =================*/
+
+.idx6 {
+    width: 100%;
+    padding-bottom: 1020px;
+}
+
+.mainbox6 {
+    position: relative;
+    background: url("../img/background/asset 33.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainbox6 .bt6 {
+    background: url("../img/icon/asset 34.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 50%;
+    display: block;
+    text-align: center;
+    z-index: 5;
+}
+
+.bt6 #abgneBlock2 {
+    position: absolute;
+    width: 415px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    left: 10%;
+    right: 10%;
+    margin-top: 100px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.bt6 #abgneBlock2 ul.list2 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    width: 9999px;
+    height: 100%;
+}
+
+.bt6 #abgneBlock2 ul.list2 li {
+    float: left;
+    width: 415px;
+    height: 100%;
+}
+
+.bt6 #abgneBlock2 .list2 img {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    vertical-align: middle;
+}
+
+.bt6 #abgneBlock2 ul.playerControl2 {
+    margin: auto;
+    list-style: none;
+    position: absolute;
+    bottom: 0px;
+    height: 14px;
+}
+
+.bt6 #abgneBlock2 ul.playerControl2 li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0px 2px;
+    background: url("../img/icon/asset 166.png") no-repeat 0 0;
+}
+
+.bt6 #abgneBlock2 ul.playerControl2 li.current2 {
+    background-position: -23px 0;
+}
+
+.bt6 #abgneBlock2 ul.playerControl2 li {
+    float: left;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 0px 15px;
+    background: url("../img/icon/asset 166.png") no-repeat 0px 0;
+}
+
+.bt6 #abgneBlock2 ul.playerControl2 li.current2 {
+    background-position: 0 0;
+}
+
+.contxt6 {
+    position: absolute;
+    bottom: 145px;
+    left: 10%;
+    display: block;
+    right: 10%;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 900px;
+    z-index: 3;
+}
+
+.bt6-rwd-mobile {
+    display: none;
+}
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+
+    .contxt6 {
+        bottom: 10px;
+        font: 16px/18px "Gill Sans MT";
+    }
+}
+
+
+
+/*moible行動版*/
+
+@media screen and (max-width: 767px) {
+
+    .mainbox6 .bt6 {
+        display: none;
+    }
+    .bt6-rwd-mobile {
+        display: block;
+    }
+    .mainbox6 {
+        background: url("../img/background/asset 33.jpeg") no-repeat;
+    }
+    .bt6-rwd {
+        background: url("../img/icon/asset 34.png") no-repeat;
+        background-position: 10% 0%;
+        position: absolute;
+        width: 100%;
+        min-height: 26%;
+        z-index: 5;
+        background-size: 100%;
+    }
+
+    .bgBox-mobile6 {
+        position: relative;
+    }
+    .bt6-rwd-mobile .bgBox-mob {
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .bt6-rwd-mobile .bgBox-mob img {
+        align-items: flex-end;
+        width: 100%;
+    }
+    .pot-circle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .pot-circle ul li {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        margin-right: 10px;
+        overflow: hidden;
+        box-shadow: 1px 5px 12px rgba(255, 255, 255, 0.5);
+    }
+    .pot-circle ul li img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+/*============== unit7 star =================*/
+
+.idx7 {
+    width: 100%;
+    padding-bottom: 760px;
+}
+
+.mainbox7 {
+    position: relative;
+    background: url("../img/background/horta_cozinha.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+/*============== arrow ==============*/
+
+.hline .unit7 {
+    position: absolute;
+    display: block;
+    bottom: 173px;
+    margin-left: -12px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox7 {
+        background: url("../img/background/horta_cozinha.jpg") -500px no-repeat;
+        background-size: cover;
+    }
+    .hline .unit7 {
+        position: absolute;
+        display: block;
+        bottom: 110px;
+        margin-left: -8px;
+        left: 50%;
+        width: 7%;
+        height: 8%;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============== unit8 star =================*/
+
+.idx8 {
+    width: 100%;
+    padding-bottom: 1480px;
+}
+
+.mainbox8 {
+    position: relative;
+    background: url("../img/background/asset 20.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainbox8 .bt8 {
+    background: url("../img/icon/asset 47.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    min-height: 300px;
+    display: block;
+    text-align: center;
+    z-index: 1;
+}
+
+.bt8 #abgneBlock3 {
+    position: absolute;
+    width: 540px;
+    height: 660px;
+    display: block;
+    margin: 0 auto;
+    left: 10%;
+    right: 10%;
+    margin-top: 100px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.bt8 #abgneBlock3 ul.list3 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    width: 9999px;
+    height: 100%;
+}
+
+.bt8 #abgneBlock3 ul.list3 li {
+    float: left;
+    width: 540px;
+    height: 100%;
+}
+
+.bt8 #abgneBlock3 .list3 img {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    vertical-align: middle;
+}
+
+.contxt8 {
+    position: absolute;
+    bottom: 500px;
+    left: 10%;
+    display: block;
+    right: 10%;
+    font: 16px/18px "Gill Sans MT";
+    color: #968673;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 900px;
+    z-index: 3;
+}
+
+/*============== 3 windows =================*/
+
+.bgBox2 {
+    position: absolute;
+    bottom: -380%;
+    left: 10%;
+    right: 10%;
+    display: block;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 825px;
+}
+
+.bgBox2 ul {
+    float: left;
+    position: relative;
+    left: 0%;
+    text-align: center;
+    margin: 0 0 0 0;
+    width: 825px;
+}
+
+.bgBox2 ul li {
+    width: 256px;
+    height: 411px;
+    float: left;
+    position: relative;
+    right: 0%;
+    text-align: center;
+    margin: 40px 18px 0 0;
+}
+
+.bgBox2 ul li img {
+    width: 256px;
+    height: 411px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bgBox2 .plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 63px;
+    height: 63px;
+    margin: -31px 0 0 -31px;
+    background: url("../img/icon/asset 165.png") no-repeat;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.bgBox2 .eff_Mask {
+    width: 256px;
+    height: 411px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .8s;
+    transform: scale(1);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.bgBox2 li:hover .eff_Mask {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.bt8-rwd-mobile {
+    display: none;
+}
+
+
+
+
+
+
+
+/*====================maskbox==========================*/
+
+.btn-main5 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main6 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-main7 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    margin: 0 0 0 50px;
+    z-index: 10;
+}
+
+.btn-mainbox5 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox05.png");
+}
+
+.btn-mainbox6 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox06.png");
+}
+
+.btn-mainbox7 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    width: 760px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../img/maskbox/maskbox07.png");
+}
+
+.bt8-rwd-ipad {
+    display: none;
+}
+
+.bt8-rwd-mobile {
+    display: none;
+}
+
+
+
+
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+    .mainbox8 .bt8 {
+        display: none;
+    }
+    .bt8-rwd-mobile {
+        display: none;
+    }
+    .bt8-rwd-ipad {
+        display: block;
+    }
+
+    .bt8-rwd {
+        background: url("../img/icon/asset 47.png") no-repeat;
+        background-position: 10% 30%;
+        position: absolute;
+        width: 100%;
+        min-height: 15%;
+        z-index: 5;
+        background-size: 100%;
+    }
+
+    .bt8-rwd-ipad #abgneBlock3 {
+        position: absolute;
+        width: 540px;
+        height: 660px;
+        display: block;
+        margin: 0 auto;
+        left: 10%;
+        right: 10%;
+        margin-top: 100px;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .bt8-rwd-ipad #abgneBlock3 ul.list3 {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: absolute;
+        width: 9999px;
+        height: 100%;
+    }
+
+    .bt8-rwd-ipad #abgneBlock3 ul.list3 li {
+        float: left;
+        width: 540px;
+        height: 100%;
+    }
+
+    .bt8-rwd-ipad #abgneBlock3 .list3 img {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        vertical-align: middle;
+    }
+    .bt8-rwd-ipad .bgBox-ipad {
+        position: relative;
+        top: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .bt8-rwd-ipad .bgBox-ipad li {
+        position: relative;
+    }
+    .bt8-rwd-ipad .bgBox-ipad li img {
+        margin: 10px;
+        width: 220px;
+        height: 400px;
+    }
+
+    .bt8-rwd-ipad .bgBox-ipad .plus {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 63px;
+        height: 63px;
+        margin: -31px 0 0 -31px;
+        background: url("../img/icon/asset 165.png") no-repeat;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .bt8-rwd-ipad .bgBox-ipad .eff_Mask {
+        width: 220px;
+        height: 400px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, .4);
+        opacity: 0;
+        transition: .8s;
+        transform: scale(1);
+        z-index: 9;
+        cursor: pointer;
+    }
+
+    .bt8-rwd-ipad .bgBox-ipad li:hover .eff_Mask {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .btn-main5 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+    .btn-main6 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+    .btn-main7 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox8 .bt8 {
+        display: none;
+    }
+    .bt8-rwd-ipad {
+        display: none;
+    }
+    .bt8-rwd-mobile {
+        display: block;
+    }
+    .idx8 {
+        width: 100%;
+        padding-bottom: 1580px;
+    }
+    .mainbox8 {
+        background: url("../img/background/asset 20.jpeg") repeat;
+    }
+    .bt8-rwd {
+        background: url("../img/icon/asset 47.png") no-repeat;
+        background-position: 10% 10%;
+        position: absolute;
+        width: 100%;
+        min-height: 15%;
+        z-index: 5;
+        background-size: 100%;
+    }
+    .contxt8 {
+        font: 16px/18px "Gill Sans MT";
+        bottom: 530px;
+    }
+
+    .bt8-rwd-mobile #abgneBlock3 {
+        position: absolute;
+        width: 330px;
+        height: 80%;
+        display: block;
+        margin: 0 auto;
+        left: 10%;
+        right: 10%;
+        margin-top: 150px;
+        z-index: 2;
+    }
+
+    .bt8-rwd-mobile #abgneBlock3 .list3 {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bt8-rwd-mobile #abgneBlock3 .list3 li {
+        float: left;
+    }
+
+    .bt8-rwd-mobile #abgneBlock3 .list3 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        vertical-align: middle;
+    }
+
+    .bt8-rwd-mobile .bgBox-mobile {
+        position: relative;
+        top: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .bt8-rwd-mobile .bgBox-mobile li {
+        position: relative;
+    }
+    .bt8-rwd-mobile .bgBox-mobile li img {
+
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .bt8-rwd-mobile .bgBox-mobile .eff_Mask {
+        width: 400px;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .4);
+        opacity: 0;
+        transition: .8s;
+        transform: scale(1);
+        z-index: 9;
+        cursor: pointer;
+    }
+
+    .bt8-rwd-mobile .bgBox-mobile li:hover .eff_Mask {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .btn-main5 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+    .btn-main6 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+    .btn-main7 {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        margin: 0;
+        z-index: 10;
+    }
+    .btn-mainbox5 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url("../img/maskbox/maskbox05.png");
+        background-position: -260% 100%;
+    }
+    .btn-mainbox6 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url("../img/maskbox/maskbox06.png");
+        background-position: -220% 15%;
+    }
+    .btn-mainbox7 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url("../img/maskbox/maskbox07.png");
+        background-position: -135% -1000%;
+    }
+}
+
+
+
+/*============== unit9 star =================*/
+
+.idx9 {
+    width: 100%;
+    padding-bottom: 760px;
+}
+
+.mainbox9 {
+    position: relative;
+    background: url("../img/background/bbq.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+
+
+
+/*============== arrow ==============*/
+
+.hline .unit9 {
+    position: absolute;
+    display: block;
+    bottom: 144px;
+    margin-left: 3px;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox9 {
+        background: url("../img/background/bbq.jpg") -350px no-repeat;
+        background-size: cover;
+    }
+
+    .hline .unit9 {
+        position: absolute;
+        display: block;
+        bottom: 90px;
+        margin-left: 1px;
+        left: 50%;
+        width: 7%;
+        height: 8%;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+
+
+
+/*============== unit10 star =================*/
+
+.idx10 {
+    width: 100%;
+    padding-bottom: 2000px;
+}
+
+.mainbox10 {
+    position: relative;
+    background: url("../img/background/asset 58.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainbox10 .bt10 {
+    background: url("../img/icon/asset 59.png") no-repeat fixed;
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center;
+    z-index: 1;
+}
+
+.bt10 .bqq {
+    position: relative;
+    max-width: 800px;
+    height: 500px;
+    z-index: 51;
+    margin-top: 100px;
+}
+
+.smoke {
+    background: url("../img/gosun/asset 65.png") no-repeat;
+    position: absolute;
+    top: 1200px;
+    width: 100%;
+    height: 791px;
+    text-align: center;
+    z-index: 50;
+}
+
+.contxt10 {
+    display: block;
+    position: absolute;
+    left: 12%;
+    right: 10%;
+    font: 14px/18px "Gill Sans MT";
+    color: #968673;
+    z-index: 3;
+    margin: 0 auto;
+    max-width: 800px;
+    height: 680px;
+}
+
+.contxthd {
+    position: relative;
+    margin: 0 0 60px 0;
+    width: 800px;
+    height: 311px;
+}
+
+.contxthd .txt {
+    width: 350px;
+    float: left;
+    padding: 0 50px 0 0;
+    display: table-cell;
+    zoom: 1;
+    vertical-align: top;
+    line-height: 23px;
+}
+
+.contxthd .txt p {
+    padding-top: 15px;
+}
+
+.contxtft .txt p {
+    padding-top: 15px;
+}
+
+.contxtft .txt {
+    width: 350px;
+    padding: 0 0 0 50px;
+    display: table-cell;
+    float: right;
+    zoom: 1;
+    vertical-align: top;
+    line-height: 20px;
+}
+
+.contxthd .photo {
+    width: 354px;
+    height: 311px;
+    float: right;
+}
+
+.contxtft .photo2 {
+    width: 354px;
+    height: 311px;
+    float: left;
+    overflow: hidden;
+}
+
+.pot {
+    position: relative;
+}
+
+.pot img {
+    position: absolute;
+    padding-top: 20px;
+    left: -10%;
+    z-index: 2;
+}
+
+
+
+
+/*=====img 放大特效=====*/
+
+.photo {
+    overflow: hidden;
+    position: relative;
+}
+
+.contxt10 .photo img {
+    vertical-align: middle;
+    transition: 1s;
+    transform: scale(1);
+}
+
+.contxt10 .photo:hover img {
+    animation: will 3s 2s;
+    transform: scale(1.5);
+}
+
+.bt10-ipad {
+    display: none;
+}
+
+.bt10-rwd {
+    display: none;
+}
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+    .mainbox10 .bt10 {
+        display: none;
+    }
+    .mainbox10 {
+        background: url("../img/background/asset 58.jpeg") no-repeat;
+    }
+
+    .mainbox10 .bt10-ipad {
+        background: url("../img/icon/asset 59.png") no-repeat;
+        position: absolute;
+        width: 100%;
+        display: block;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .bt10-ipad .bqq2 {
+        position: relative;
+        max-width: 800px;
+        height: 500px;
+        z-index: 51;
+        margin-top: 100px;
+    }
+
+    .bt10-ipad.smoke {
+        background: url("../img/gosun/asset 65.png") no-repeat;
+        position: absolute;
+        top: 1200px;
+        width: 100%;
+        height: 791px;
+        text-align: center;
+        z-index: 50;
+    }
+
+    .contxt10 {
+        display: block;
+        position: absolute;
+        left: 12%;
+        right: 10%;
+        font: 14px/18px "Gill Sans MT";
+        color: #968673;
+        z-index: 3;
+        margin: 0 auto;
+        max-width: 800px;
+        height: 680px;
+    }
+
+    .contxthd {
+        position: relative;
+        margin: 0 0 60px 0;
+        width: 800px;
+        height: 311px;
+    }
+
+    .contxthd .txt {
+        width: 350px;
+        float: left;
+        padding: 0 50px 0 0;
+        display: table-cell;
+        zoom: 1;
+        vertical-align: top;
+        line-height: 23px;
+    }
+
+    .contxthd .txt p {
+        padding-top: 15px;
+    }
+
+    .contxtft .txt p {
+        padding-top: 15px;
+    }
+
+    .contxtft .txt {
+        width: 350px;
+        padding: 0 0 0 50px;
+        display: table-cell;
+        float: right;
+        zoom: 1;
+        vertical-align: top;
+        line-height: 20px;
+    }
+
+    .contxthd .photo {
+        width: 354px;
+        height: 311px;
+        float: right;
+    }
+
+    .contxtft .photo2 {
+        width: 354px;
+        height: 311px;
+        float: left;
+        overflow: hidden;
+    }
+
+    .pot {
+        position: relative;
+    }
+
+    .pot img {
+        position: absolute;
+        padding-top: 20px;
+        left: -10%;
+        z-index: 2;
+    }
+    /*=====img 放大特效=====*/
+    .photo {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .contxt10 .photo img {
+        vertical-align: middle;
+        transition: 1s;
+        transform: scale(1);
+    }
+
+    .contxt10 .photo:hover img {
+        animation: will 3s 2s;
+        transform: scale(1.5);
+    }
+    .bt10-ipad {
+        display: none;
+    }
+    .bt10-rwd {
+        display: none;
+    }
+
+    .bbqMove {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .bt10-rwd .bqq2 {
+        align-items: center;
+        max-width: 700px;
+        height: 230px;
+        z-index: 51;
+        margin-top: 150px;
+        vertical-align: middle;
+    }
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox10 {
+        background: url("../img/background/asset 58.jpeg") no-repeat;
+    }
+
+    .mainbox10 .bt10 {
+        display: none;
+    }
+    .mainbox10 .bt10-ipad {
+        display: none;
+    }
+
+    .bt10-rwd {
+        background: url("../img/icon/asset 59.png") no-repeat;
+        background-position: 10% 5%;
+        position: absolute;
+        width: 100%;
+        min-height: 15%;
+        z-index: 5;
+        background-size: 100%;
+        display: block;
+    }
+    .bbqMove2 {
+        width: 100%;
+    }
+    .bt10-rwd .bqq3 {
+        align-items: center;
+        max-width: 100%;
+        z-index: 51;
+        margin-top: 150px;
+        vertical-align: middle;
+    }
+    .bt10-rwd .contxt10Rwd {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font: 18px/20px "Gill Sans MT";
+        color: #968673;
+        z-index: 3;
+        max-width: 800px;
+        padding: 10px;
+
+    }
+    .contxRwd{
+        order: -2;
+        margin: 0 0 10px 0;
+        padding: 0 8px;
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+    .contxtRwd2 {
+        padding: 0 8px;
+        display: block;
+        clear: both;
+        overflow: hidden;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .photo1Rwd{
+        order: -1;
+        padding: 0 20px;
+        width: 354px;
+        height: 306px;
+    }
+    .photo2Rwd{
+        padding: 0 20px;
+        width: 354px;
+        height: 306px;
+    }
+    .potRwd{
+        width: 100%;
+        flex-grow: 1;
+        padding: 180px 0px 0px 0px;
+    }
+    .potRwd img{
+        width: 100%;
+    }
+    .bt10-rwd .smoke{
+        background: url("../img/gosun/asset 65.png");
+        top: 45%;
+        width: 100%;
+        height: 45%;
+        text-align: center;
+        z-index: -1;
+    }
+}
+/*============== unit11 star =================*/
+
+.idx11 {
+    width: 100%;
+    padding-bottom: 760px;
+}
+
+.mainbox11 {
+    position: relative;
+    background: url("../img/background/CC011_T_Email.jpg") no-repeat fixed;
+    background-size: cover;
+}
+.ptslide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10%;
+    bottom: 10%;
+    z-index: 3;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+.vkTitle{
+    width: 342px;
+    height: 165px;
+}
+.ptslide .txt{
+    position: absolute;
+    align-self: flex-end;
+    width: 700px;
+    color: #fff;
+    font: 16px/18px "Gill Sans MT";
+}
+.ptslide .txt p {
+    line-height: 23px;
+    margin: 30px 0 0 0;
+}
+.ptslideRwd{
+        display: none;
+    }
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {
+    .ptslideRwd{
+        display: none;
+    }
+    .vkTitle{
+        width: 37%;
+    }
+
+    .vkTitle img{
+        width: 80%;
+    }
+    
+}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .ptslide{
+        display: none;
+    }
+    .ptslideRwd{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+    }
+    .idx11 {
+    width: 100%;
+    padding-bottom: 1000px;
+    }
+    .mainbox11 {
+        background: url("../img/background/CC011_T_Email.jpg") -1200px no-repeat;
+        background-size: cover;
+    }
+    .vkTitleRwd{
+        align-items: center;
+        width: 250px;
+    }
+    .vkTitleRwd img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .ptslideRwd .txt{
+        position: absolute;
+        padding-top: 25%;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: #fff;
+        font: 18px/20px "Gill Sans MT";
+}
+    .ptslideRwd .txt p {
+        line-height: 20px;
+        margin: 30px 0 0 0;
+}
+
+}
+
+
+
+
+/*============== unit12 star =================*/
+
+.idx12 {
+    width: 100%;
+    padding-bottom: 760px;
+}
+
+.mainbox12 {
+    position: relative;
+    background: url("../img/background/CC022_T_cooling.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox12 {
+        background: url("../img/background/CC022_T_cooling.jpg") -500px no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+
+/*============== unit13 star =================*/
+
+.idx13 {
+    width: 100%;
+    padding-bottom: 1140px;
+}
+
+.mainbox13 {
+    position: relative;
+    background: url("../img/background/asset 143.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox13 {
+        background: url("../img/background/asset 143.jpeg") no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+/*============== unit14 star =================*/
+
+.idx14 {
+    width: 100%;
+    padding-bottom: 1140px;
+}
+
+.mainbox14 {
+    position: relative;
+    background: url("../img/background/bg-marble.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox14 {
+        background: url("../img/background/bg-marble.jpg") no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+/*============== unit14-5 star =================*/
+
+.idx14-5 {
+    width: 100%;
+    padding-bottom: 1000px;
+}
+
+.mainbox14-5 {
+    position: relative;
+    background-color: #222;
+    overflow: hidden;
+}
+
+
+#info {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    line-height: 120px;
+    color: #222;
+    background-color: rgba(255, 255, 255, .7);
+    padding: 5px;
+    font-family: Monospace;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 150px;
+    width: 100%;
+    text-align: center;
+    font-family: Monospace;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.element {
+    width: 120px;
+    height: 160px;
+    box-shadow: 0px 0px 12px rgba(255, 0, 0, 0.5);
+    border: 1px solid rgba(127, 255, 255, 0.25);
+    text-align: center;
+    cursor: default;
+}
+
+.element:hover {
+    box-shadow: 0px 0px 12px rgba(255, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.element .number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.element .symbol {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
+}
+
+.element .details {
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    right: 0px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+button {
+    flex-grow: 1;
+    color: #222;
+    font-size: 25px;
+    background: transparent;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+button:active {
+    color: #a52124;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+/*============== RWD ==============*/
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox14 {
+        background: url("../img/background/bg-marble.jpg") no-repeat;
+        background-size: cover;
+    }
+    button {
+    font-size: 18px;
+    }
+}
+
+
+
+
+/*============== unit15 star =================*/
+
+.mask15 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+
+.idx15 {
+    width: 100%;
+    padding-bottom: 860px;
+}
+
+.mainbox15 {
+    position: relative;
+    background: url("../img/background/asset\ 154-2.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.mainbox15 .bt15 {
+    background: url("../img/icon/logo-15.png") no-repeat fixed;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-height: 20%;
+    display: block;
+    text-align: center;
+    z-index: 3;
+}
+
+
+
+/*============== RWD ==============*/
+
+
+/*ipad版*/
+
+@media screen and (max-width: 1080px) {}
+
+
+
+/*mobile行動版*/
+
+@media screen and (max-width: 767px) {
+    .mainbox15 {
+        background: url("../img/background/asset\ 154-2.jpg") -200px no-repeat;
+        background-size: cover;
+    }
+
+    .mainbox15 .bt15 {
+        display: none;
+    }
+
+    .bt15-rwd {
+        background: url("../img/icon/logo-15.png") no-repeat;
+        background-position: 50% 30%;
+        position: absolute;
+        width: 100%;
+        min-height: 20%;
+        z-index: 5;
+    }
+}
+
+
+
+/*============== back_Top =================*/
+
+.back_Top {
+    right: 40px;
+    bottom: 40px;
+    padding: 0px 20px;
+    height: 48px;
+    /*    width: 50px;
+    height: 50px;*/
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    overflow: hidden;
+    z-index: 20;
+    opacity: 1;
+    transform: rotate(180deg);
+    transition: all 0.4s ease-in-out 0s;
+    background: rgba(0, 0, 0, .7);
+    cursor: pointer;
+}
+
+.back_Top img {
+    height: 20px;
+    margin-bottom: -10px;
+    animation-name: gotop;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-delay: 1000ms;
+}
+
+.back_Top img:hover {
+    opacity: .6;
+}
+
+@keyframes gotop {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0
+    }
+
+    33% {
+        opacity: 1
+    }
+
+    66% {
+        opacity: 1
+    }
+
+    100% {
+        transform: translate3d(0, 15px, 0);
+        opacity: 0
+    }
+}
